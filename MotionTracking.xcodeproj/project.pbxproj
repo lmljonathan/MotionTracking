@@ -1,0 +1,741 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		239C3AB533567BAEE4110B1F /* Pods_MotionTracking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC77E25861CE998108AB2DF5 /* Pods_MotionTracking.framework */; };
+		9065431E1DC7BE8E00DAE096 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065431D1DC7BE8E00DAE096 /* AppDelegate.swift */; };
+		906543201DC7BE8E00DAE096 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065431F1DC7BE8E00DAE096 /* ViewController.swift */; };
+		906543231DC7BE8E00DAE096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 906543211DC7BE8E00DAE096 /* Main.storyboard */; };
+		906543251DC7BE8E00DAE096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 906543241DC7BE8E00DAE096 /* Assets.xcassets */; };
+		906543281DC7BE8E00DAE096 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 906543261DC7BE8E00DAE096 /* LaunchScreen.storyboard */; };
+		906543331DC7BE8F00DAE096 /* MotionTrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906543321DC7BE8F00DAE096 /* MotionTrackingTests.swift */; };
+		9065433E1DC7BE8F00DAE096 /* MotionTrackingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065433D1DC7BE8F00DAE096 /* MotionTrackingUITests.swift */; };
+		9079719F1DD0510700D46D43 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9079719E1DD0510700D46D43 /* DataHandler.swift */; };
+		90BCCCD11DD52A4B005C2C72 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BCCCD01DD52A4B005C2C72 /* Node.swift */; };
+		CC3B7B56AB3F1292DDDCD669 /* Pods_MotionTrackingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9082BC30AE8549F52D714E /* Pods_MotionTrackingUITests.framework */; };
+		CD701C403BF15F79B10763F1 /* Pods_MotionTrackingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8677B9CDBC4353466790B69C /* Pods_MotionTrackingTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9065432F1DC7BE8F00DAE096 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 906543121DC7BE8E00DAE096 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 906543191DC7BE8E00DAE096;
+			remoteInfo = MotionTracking;
+		};
+		9065433A1DC7BE8F00DAE096 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 906543121DC7BE8E00DAE096 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 906543191DC7BE8E00DAE096;
+			remoteInfo = MotionTracking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F9082BC30AE8549F52D714E /* Pods_MotionTrackingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotionTrackingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		644E66BDD18B413C3F1864B7 /* Pods-MotionTrackingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionTrackingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MotionTrackingUITests/Pods-MotionTrackingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7E549763A341DB141ACE2A40 /* Pods-MotionTrackingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionTrackingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MotionTrackingTests/Pods-MotionTrackingTests.release.xcconfig"; sourceTree = "<group>"; };
+		8677B9CDBC4353466790B69C /* Pods_MotionTrackingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotionTrackingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9065431A1DC7BE8E00DAE096 /* MotionTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9065431D1DC7BE8E00DAE096 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9065431F1DC7BE8E00DAE096 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		906543221DC7BE8E00DAE096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		906543241DC7BE8E00DAE096 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		906543271DC7BE8E00DAE096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		906543291DC7BE8E00DAE096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9065432E1DC7BE8F00DAE096 /* MotionTrackingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotionTrackingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		906543321DC7BE8F00DAE096 /* MotionTrackingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionTrackingTests.swift; sourceTree = "<group>"; };
+		906543341DC7BE8F00DAE096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		906543391DC7BE8F00DAE096 /* MotionTrackingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotionTrackingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9065433D1DC7BE8F00DAE096 /* MotionTrackingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionTrackingUITests.swift; sourceTree = "<group>"; };
+		9065433F1DC7BE8F00DAE096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9079719E1DD0510700D46D43 /* DataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
+		90BCCCD01DD52A4B005C2C72 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		A30DC65283F8D3213FA11995 /* Pods-MotionTracking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionTracking.release.xcconfig"; path = "Pods/Target Support Files/Pods-MotionTracking/Pods-MotionTracking.release.xcconfig"; sourceTree = "<group>"; };
+		AF2D64BE45F856C0CE64A552 /* Pods-MotionTrackingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionTrackingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MotionTrackingTests/Pods-MotionTrackingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B3D260108E74C76F6C560AF3 /* Pods-MotionTracking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionTracking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MotionTracking/Pods-MotionTracking.debug.xcconfig"; sourceTree = "<group>"; };
+		D0D624F05F807AC68290284E /* Pods-MotionTrackingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionTrackingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MotionTrackingUITests/Pods-MotionTrackingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC77E25861CE998108AB2DF5 /* Pods_MotionTracking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotionTracking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		906543171DC7BE8E00DAE096 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				239C3AB533567BAEE4110B1F /* Pods_MotionTracking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9065432B1DC7BE8F00DAE096 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD701C403BF15F79B10763F1 /* Pods_MotionTrackingTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		906543361DC7BE8F00DAE096 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC3B7B56AB3F1292DDDCD669 /* Pods_MotionTrackingUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4BC406FD275825B52C89C29F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3D260108E74C76F6C560AF3 /* Pods-MotionTracking.debug.xcconfig */,
+				A30DC65283F8D3213FA11995 /* Pods-MotionTracking.release.xcconfig */,
+				AF2D64BE45F856C0CE64A552 /* Pods-MotionTrackingTests.debug.xcconfig */,
+				7E549763A341DB141ACE2A40 /* Pods-MotionTrackingTests.release.xcconfig */,
+				D0D624F05F807AC68290284E /* Pods-MotionTrackingUITests.debug.xcconfig */,
+				644E66BDD18B413C3F1864B7 /* Pods-MotionTrackingUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		906543111DC7BE8E00DAE096 = {
+			isa = PBXGroup;
+			children = (
+				9065431C1DC7BE8E00DAE096 /* MotionTracking */,
+				906543311DC7BE8F00DAE096 /* MotionTrackingTests */,
+				9065433C1DC7BE8F00DAE096 /* MotionTrackingUITests */,
+				9065431B1DC7BE8E00DAE096 /* Products */,
+				4BC406FD275825B52C89C29F /* Pods */,
+				C446543C0F6732BA62A0A200 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9065431B1DC7BE8E00DAE096 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9065431A1DC7BE8E00DAE096 /* MotionTracking.app */,
+				9065432E1DC7BE8F00DAE096 /* MotionTrackingTests.xctest */,
+				906543391DC7BE8F00DAE096 /* MotionTrackingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9065431C1DC7BE8E00DAE096 /* MotionTracking */ = {
+			isa = PBXGroup;
+			children = (
+				9065431D1DC7BE8E00DAE096 /* AppDelegate.swift */,
+				9065431F1DC7BE8E00DAE096 /* ViewController.swift */,
+				90BCCCD01DD52A4B005C2C72 /* Node.swift */,
+				9079719E1DD0510700D46D43 /* DataHandler.swift */,
+				906543211DC7BE8E00DAE096 /* Main.storyboard */,
+				906543241DC7BE8E00DAE096 /* Assets.xcassets */,
+				906543261DC7BE8E00DAE096 /* LaunchScreen.storyboard */,
+				906543291DC7BE8E00DAE096 /* Info.plist */,
+			);
+			path = MotionTracking;
+			sourceTree = "<group>";
+		};
+		906543311DC7BE8F00DAE096 /* MotionTrackingTests */ = {
+			isa = PBXGroup;
+			children = (
+				906543321DC7BE8F00DAE096 /* MotionTrackingTests.swift */,
+				906543341DC7BE8F00DAE096 /* Info.plist */,
+			);
+			path = MotionTrackingTests;
+			sourceTree = "<group>";
+		};
+		9065433C1DC7BE8F00DAE096 /* MotionTrackingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9065433D1DC7BE8F00DAE096 /* MotionTrackingUITests.swift */,
+				9065433F1DC7BE8F00DAE096 /* Info.plist */,
+			);
+			path = MotionTrackingUITests;
+			sourceTree = "<group>";
+		};
+		C446543C0F6732BA62A0A200 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC77E25861CE998108AB2DF5 /* Pods_MotionTracking.framework */,
+				8677B9CDBC4353466790B69C /* Pods_MotionTrackingTests.framework */,
+				0F9082BC30AE8549F52D714E /* Pods_MotionTrackingUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		906543191DC7BE8E00DAE096 /* MotionTracking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 906543421DC7BE8F00DAE096 /* Build configuration list for PBXNativeTarget "MotionTracking" */;
+			buildPhases = (
+				A69014986086D6D83FFA51E9 /* [CP] Check Pods Manifest.lock */,
+				906543161DC7BE8E00DAE096 /* Sources */,
+				906543171DC7BE8E00DAE096 /* Frameworks */,
+				906543181DC7BE8E00DAE096 /* Resources */,
+				8B4A88AA63844F4600C99F1F /* [CP] Embed Pods Frameworks */,
+				828FE6F82E169C8765A57D09 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MotionTracking;
+			productName = MotionTracking;
+			productReference = 9065431A1DC7BE8E00DAE096 /* MotionTracking.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9065432D1DC7BE8F00DAE096 /* MotionTrackingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 906543451DC7BE8F00DAE096 /* Build configuration list for PBXNativeTarget "MotionTrackingTests" */;
+			buildPhases = (
+				06753D03690ADE55A992789F /* [CP] Check Pods Manifest.lock */,
+				9065432A1DC7BE8F00DAE096 /* Sources */,
+				9065432B1DC7BE8F00DAE096 /* Frameworks */,
+				9065432C1DC7BE8F00DAE096 /* Resources */,
+				215F5718AA26A28CA8A97BE5 /* [CP] Embed Pods Frameworks */,
+				F0991C7F6AD968725D9B5237 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				906543301DC7BE8F00DAE096 /* PBXTargetDependency */,
+			);
+			name = MotionTrackingTests;
+			productName = MotionTrackingTests;
+			productReference = 9065432E1DC7BE8F00DAE096 /* MotionTrackingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		906543381DC7BE8F00DAE096 /* MotionTrackingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 906543481DC7BE8F00DAE096 /* Build configuration list for PBXNativeTarget "MotionTrackingUITests" */;
+			buildPhases = (
+				5AE21A45F6ACB637313B0C71 /* [CP] Check Pods Manifest.lock */,
+				906543351DC7BE8F00DAE096 /* Sources */,
+				906543361DC7BE8F00DAE096 /* Frameworks */,
+				906543371DC7BE8F00DAE096 /* Resources */,
+				939E4027E7DEC19456E28F07 /* [CP] Embed Pods Frameworks */,
+				7AB784BA241BC2E18F7662CA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9065433B1DC7BE8F00DAE096 /* PBXTargetDependency */,
+			);
+			name = MotionTrackingUITests;
+			productName = MotionTrackingUITests;
+			productReference = 906543391DC7BE8F00DAE096 /* MotionTrackingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		906543121DC7BE8E00DAE096 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Limitless;
+				TargetAttributes = {
+					906543191DC7BE8E00DAE096 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = CQD8Z7UVJ4;
+						ProvisioningStyle = Automatic;
+					};
+					9065432D1DC7BE8F00DAE096 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = CQD8Z7UVJ4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 906543191DC7BE8E00DAE096;
+					};
+					906543381DC7BE8F00DAE096 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = CQD8Z7UVJ4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 906543191DC7BE8E00DAE096;
+					};
+				};
+			};
+			buildConfigurationList = 906543151DC7BE8E00DAE096 /* Build configuration list for PBXProject "MotionTracking" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 906543111DC7BE8E00DAE096;
+			productRefGroup = 9065431B1DC7BE8E00DAE096 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				906543191DC7BE8E00DAE096 /* MotionTracking */,
+				9065432D1DC7BE8F00DAE096 /* MotionTrackingTests */,
+				906543381DC7BE8F00DAE096 /* MotionTrackingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		906543181DC7BE8E00DAE096 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				906543281DC7BE8E00DAE096 /* LaunchScreen.storyboard in Resources */,
+				906543251DC7BE8E00DAE096 /* Assets.xcassets in Resources */,
+				906543231DC7BE8E00DAE096 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9065432C1DC7BE8F00DAE096 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		906543371DC7BE8F00DAE096 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06753D03690ADE55A992789F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		215F5718AA26A28CA8A97BE5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MotionTrackingTests/Pods-MotionTrackingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AE21A45F6ACB637313B0C71 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7AB784BA241BC2E18F7662CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MotionTrackingUITests/Pods-MotionTrackingUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		828FE6F82E169C8765A57D09 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MotionTracking/Pods-MotionTracking-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B4A88AA63844F4600C99F1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MotionTracking/Pods-MotionTracking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		939E4027E7DEC19456E28F07 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MotionTrackingUITests/Pods-MotionTrackingUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A69014986086D6D83FFA51E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F0991C7F6AD968725D9B5237 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MotionTrackingTests/Pods-MotionTrackingTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		906543161DC7BE8E00DAE096 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				906543201DC7BE8E00DAE096 /* ViewController.swift in Sources */,
+				9079719F1DD0510700D46D43 /* DataHandler.swift in Sources */,
+				9065431E1DC7BE8E00DAE096 /* AppDelegate.swift in Sources */,
+				90BCCCD11DD52A4B005C2C72 /* Node.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9065432A1DC7BE8F00DAE096 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				906543331DC7BE8F00DAE096 /* MotionTrackingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		906543351DC7BE8F00DAE096 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9065433E1DC7BE8F00DAE096 /* MotionTrackingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		906543301DC7BE8F00DAE096 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 906543191DC7BE8E00DAE096 /* MotionTracking */;
+			targetProxy = 9065432F1DC7BE8F00DAE096 /* PBXContainerItemProxy */;
+		};
+		9065433B1DC7BE8F00DAE096 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 906543191DC7BE8E00DAE096 /* MotionTracking */;
+			targetProxy = 9065433A1DC7BE8F00DAE096 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		906543211DC7BE8E00DAE096 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				906543221DC7BE8E00DAE096 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		906543261DC7BE8E00DAE096 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				906543271DC7BE8E00DAE096 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		906543401DC7BE8F00DAE096 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		906543411DC7BE8F00DAE096 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		906543431DC7BE8F00DAE096 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3D260108E74C76F6C560AF3 /* Pods-MotionTracking.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CQD8Z7UVJ4;
+				INFOPLIST_FILE = MotionTracking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LimitlessStudios.MotionTracking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		906543441DC7BE8F00DAE096 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A30DC65283F8D3213FA11995 /* Pods-MotionTracking.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CQD8Z7UVJ4;
+				INFOPLIST_FILE = MotionTracking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LimitlessStudios.MotionTracking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		906543461DC7BE8F00DAE096 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF2D64BE45F856C0CE64A552 /* Pods-MotionTrackingTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CQD8Z7UVJ4;
+				INFOPLIST_FILE = MotionTrackingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LimitlessStudios.MotionTrackingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MotionTracking.app/MotionTracking";
+			};
+			name = Debug;
+		};
+		906543471DC7BE8F00DAE096 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E549763A341DB141ACE2A40 /* Pods-MotionTrackingTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CQD8Z7UVJ4;
+				INFOPLIST_FILE = MotionTrackingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LimitlessStudios.MotionTrackingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MotionTracking.app/MotionTracking";
+			};
+			name = Release;
+		};
+		906543491DC7BE8F00DAE096 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0D624F05F807AC68290284E /* Pods-MotionTrackingUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = CQD8Z7UVJ4;
+				INFOPLIST_FILE = MotionTrackingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LimitlessStudios.MotionTrackingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MotionTracking;
+			};
+			name = Debug;
+		};
+		9065434A1DC7BE8F00DAE096 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 644E66BDD18B413C3F1864B7 /* Pods-MotionTrackingUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = CQD8Z7UVJ4;
+				INFOPLIST_FILE = MotionTrackingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LimitlessStudios.MotionTrackingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MotionTracking;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		906543151DC7BE8E00DAE096 /* Build configuration list for PBXProject "MotionTracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				906543401DC7BE8F00DAE096 /* Debug */,
+				906543411DC7BE8F00DAE096 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		906543421DC7BE8F00DAE096 /* Build configuration list for PBXNativeTarget "MotionTracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				906543431DC7BE8F00DAE096 /* Debug */,
+				906543441DC7BE8F00DAE096 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		906543451DC7BE8F00DAE096 /* Build configuration list for PBXNativeTarget "MotionTrackingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				906543461DC7BE8F00DAE096 /* Debug */,
+				906543471DC7BE8F00DAE096 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		906543481DC7BE8F00DAE096 /* Build configuration list for PBXNativeTarget "MotionTrackingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				906543491DC7BE8F00DAE096 /* Debug */,
+				9065434A1DC7BE8F00DAE096 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 906543121DC7BE8E00DAE096 /* Project object */;
+}
