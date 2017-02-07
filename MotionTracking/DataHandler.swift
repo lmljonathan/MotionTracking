@@ -37,7 +37,7 @@ class DataHandler {
     
     private func getData(from URLString: String, completion: @escaping (_ place: String) -> Void){
         Alamofire.request(URLString).responseJSON { response in
-            if let json = response.result.value {
+            if response.result.value != nil {
                 //print("JSON: \(JSON)")
                 let json = JSON(data: response.data!)
                 if let place = json["results"][0]["name"].string {

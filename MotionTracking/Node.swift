@@ -7,10 +7,24 @@
 //
 
 import Foundation
+import UIKit
 
 struct Node {
     var location: (Double, Double)?
     var activity: String?
-    var venue: String?
+    
+    var topVenue: Venue?
+    var possibleVenues: [Venue]?
     var brightness: Double?
+    
+    func description() -> String {
+        return "Top Venue: \(topVenue)\nBrightness: \(brightness)\nLocation: \(location)"
+    }
+    
+}
+
+struct Venue {
+    var name: String!
+    var address: String!
+    var likelihoodScore: Double!
 }

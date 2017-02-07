@@ -17,6 +17,8 @@
 		9065433E1DC7BE8F00DAE096 /* MotionTrackingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065433D1DC7BE8F00DAE096 /* MotionTrackingUITests.swift */; };
 		9079719F1DD0510700D46D43 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9079719E1DD0510700D46D43 /* DataHandler.swift */; };
 		90BCCCD11DD52A4B005C2C72 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BCCCD01DD52A4B005C2C72 /* Node.swift */; };
+		90DC4EDF1E3FE9E600AA0D62 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC4EDE1E3FE9E600AA0D62 /* FirebaseHandler.swift */; };
+		90DC4EE21E3FEB3800AA0D62 /* GetDataMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC4EE11E3FEB3800AA0D62 /* GetDataMethods.swift */; };
 		CC3B7B56AB3F1292DDDCD669 /* Pods_MotionTrackingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9082BC30AE8549F52D714E /* Pods_MotionTrackingUITests.framework */; };
 		CD701C403BF15F79B10763F1 /* Pods_MotionTrackingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8677B9CDBC4353466790B69C /* Pods_MotionTrackingTests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,8 @@
 		9065433F1DC7BE8F00DAE096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9079719E1DD0510700D46D43 /* DataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		90BCCCD01DD52A4B005C2C72 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		90DC4EDE1E3FE9E600AA0D62 /* FirebaseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHandler.swift; sourceTree = "<group>"; };
+		90DC4EE11E3FEB3800AA0D62 /* GetDataMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetDataMethods.swift; sourceTree = "<group>"; };
 		A30DC65283F8D3213FA11995 /* Pods-MotionTracking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionTracking.release.xcconfig"; path = "Pods/Target Support Files/Pods-MotionTracking/Pods-MotionTracking.release.xcconfig"; sourceTree = "<group>"; };
 		AF2D64BE45F856C0CE64A552 /* Pods-MotionTrackingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionTrackingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MotionTrackingTests/Pods-MotionTrackingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B3D260108E74C76F6C560AF3 /* Pods-MotionTracking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionTracking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MotionTracking/Pods-MotionTracking.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,10 +135,9 @@
 		9065431C1DC7BE8E00DAE096 /* MotionTracking */ = {
 			isa = PBXGroup;
 			children = (
+				90DC4EE01E3FE9ED00AA0D62 /* Data */,
 				9065431D1DC7BE8E00DAE096 /* AppDelegate.swift */,
 				9065431F1DC7BE8E00DAE096 /* ViewController.swift */,
-				90BCCCD01DD52A4B005C2C72 /* Node.swift */,
-				9079719E1DD0510700D46D43 /* DataHandler.swift */,
 				906543211DC7BE8E00DAE096 /* Main.storyboard */,
 				906543241DC7BE8E00DAE096 /* Assets.xcassets */,
 				906543261DC7BE8E00DAE096 /* LaunchScreen.storyboard */,
@@ -159,6 +162,17 @@
 				9065433F1DC7BE8F00DAE096 /* Info.plist */,
 			);
 			path = MotionTrackingUITests;
+			sourceTree = "<group>";
+		};
+		90DC4EE01E3FE9ED00AA0D62 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				90DC4EE11E3FEB3800AA0D62 /* GetDataMethods.swift */,
+				9079719E1DD0510700D46D43 /* DataHandler.swift */,
+				90DC4EDE1E3FE9E600AA0D62 /* FirebaseHandler.swift */,
+				90BCCCD01DD52A4B005C2C72 /* Node.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		C446543C0F6732BA62A0A200 /* Frameworks */ = {
@@ -455,10 +469,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90DC4EDF1E3FE9E600AA0D62 /* FirebaseHandler.swift in Sources */,
 				906543201DC7BE8E00DAE096 /* ViewController.swift in Sources */,
 				9079719F1DD0510700D46D43 /* DataHandler.swift in Sources */,
 				9065431E1DC7BE8E00DAE096 /* AppDelegate.swift in Sources */,
 				90BCCCD11DD52A4B005C2C72 /* Node.swift in Sources */,
+				90DC4EE21E3FEB3800AA0D62 /* GetDataMethods.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

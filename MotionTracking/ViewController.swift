@@ -11,8 +11,12 @@ import CoreMotion
 import GooglePlaces
 import SwiftLocation
 
+fileprivate extension Selector {
+    static let updateData =
+        #selector(ViewController.updateData)
+}
+
 class ViewController: UIViewController {
-    
     @IBOutlet var activityLabel: UILabel!
     @IBOutlet var coordinateLabel: UILabel!
     @IBOutlet var venueLabel: UILabel!
@@ -23,15 +27,11 @@ class ViewController: UIViewController {
     let activityManager: CMMotionActivityManager! = CMMotionActivityManager()
     var placesClient: GMSPlacesClient?
     
-    var locationNames: [String] = []
-    var locationAddresses: [String] = []
-    var likelihoodScores: [Double] = []
-    
     var nodes: [Node] = []
-    
-    lazy var activityTimer: Timer! = Timer.scheduledTimer(timeInterval: 60 * 5,
+        
+    lazy var activityTimer: Timer! = Timer.scheduledTimer(timeInterval: 60 * 1,
                                                           target: self,
-                                                          selector: #selector(self.updateData),
+                                                          selector: .updateData,
                                                           userInfo: nil,
                                                           repeats: true)
     
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         updateData()
         
         // Register to receive notification
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.getScreenBrightness), name: .UIScreenBrightnessDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.getScreenBrightness), name: .UIScreenBrightnessDidChange, object: nil)
         
     }
     
@@ -57,58 +57,28 @@ class ViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: .UIScreenBrightnessDidChange, object: nil)
     }
     
-    func updateData(node: inout Node){
-        getCurrentLocation(node: &node)
-        getCurrentVenue(node: &node)
-        getScreenBrightness(node: &node)
-    }
-    
-    func getScreenBrightness(node: inout Node){
-        node.brightness = Double(UIScreen.main.brightness)
-        self.screenBrightnessLabel.text = "\(UIScreen.main.brightness)"
-    }
-    
-    func getCurrentVenue(node: inout Node){
-        placesClient?.currentPlace(callback: { (placeLikelihoods, error) -> Void in
-            guard error == nil else {
-                print("Current Place error: \(error!.localizedDescription)")
-                return
-            }
-            
-            if let placeLikelihoods = placeLikelihoods {
-                var endIndex = 2
-                
-                if placeLikelihoods.likelihoods.count < 3{
-                    endIndex = placeLikelihoods.likelihoods.endIndex
-                }
-                
-                for likelihood in placeLikelihoods.likelihoods[0...endIndex]{
-                    let place = likelihood.place
-                    self.locationNames.append(place.name)
-                    self.locationAddresses.append(place.formattedAddress!)
-                    self.likelihoodScores.append(likelihood.likelihood)
-                }
-                
-                if self.locationNames.count > 0{
-                    self.venueLabel.text = self.locationNames[0]
-                    print("locationNames: \(self.locationNames)\nlocationLiklihoods: \(self.likelihoodScores)\nlocationAddresses: \(self.locationAddresses)")
-                }
-            }
-        })
-    }
-    
-    func getCurrentLocation(node: inout Node, continuous: Bool = false){
-        let getLocation = Location.getLocation
+    func updateData(){
+        var node: Node! = Node()
         
-        getLocation(.any, .oneShot, 300, { (foundLocation) in
-            let coordinate = foundLocation.coordinate
-            node.location = (Double(coordinate.latitude), Double(coordinate.longitude))
-            self.coordinateLabel.text =  "\(coordinate.latitude) \(coordinate.longitude)"
-        }) { (_, error) in
-            print("Could not get current location: \(error)")
+        getCurrentLocation { (location) in
+            node.location = location
+            self.coordinateLabel.text = "\(location)"
         }
+        
+        getCurrentVenue { (venue, venues) in
+            node.topVenue = venue
+            node.possibleVenues = venues
+            self.venueLabel.text = venue.name
+            print(venues)
+        }
+        
+        getScreenBrightness { (brightness) in
+            node.brightness = brightness
+            self.screenBrightnessLabel.text = "\(brightness)"
+        }
+        
     }
-    
+        
     private func setUpActivityManager(){
         self.activityTimer.fire()
         activityManager.startActivityUpdates(to: OperationQueue.main) { (motionActivity) in
