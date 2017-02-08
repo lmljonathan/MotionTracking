@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		239C3AB533567BAEE4110B1F /* Pods_MotionTracking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC77E25861CE998108AB2DF5 /* Pods_MotionTracking.framework */; };
+		3C0B38221E4BC71900BEE1E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C0B38211E4BC71900BEE1E9 /* GoogleService-Info.plist */; };
 		9065431E1DC7BE8E00DAE096 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065431D1DC7BE8E00DAE096 /* AppDelegate.swift */; };
 		906543201DC7BE8E00DAE096 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065431F1DC7BE8E00DAE096 /* ViewController.swift */; };
 		906543231DC7BE8E00DAE096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 906543211DC7BE8E00DAE096 /* Main.storyboard */; };
@@ -42,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		0F9082BC30AE8549F52D714E /* Pods_MotionTrackingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotionTrackingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C0B38211E4BC71900BEE1E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3C0B38231E4BCABE00BEE1E9 /* MotionTracking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MotionTracking.entitlements; sourceTree = "<group>"; };
 		644E66BDD18B413C3F1864B7 /* Pods-MotionTrackingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionTrackingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MotionTrackingUITests/Pods-MotionTrackingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7E549763A341DB141ACE2A40 /* Pods-MotionTrackingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MotionTrackingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MotionTrackingTests/Pods-MotionTrackingTests.release.xcconfig"; sourceTree = "<group>"; };
 		8677B9CDBC4353466790B69C /* Pods_MotionTrackingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MotionTrackingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,12 +138,14 @@
 		9065431C1DC7BE8E00DAE096 /* MotionTracking */ = {
 			isa = PBXGroup;
 			children = (
+				3C0B38231E4BCABE00BEE1E9 /* MotionTracking.entitlements */,
 				90DC4EE01E3FE9ED00AA0D62 /* Data */,
 				9065431D1DC7BE8E00DAE096 /* AppDelegate.swift */,
 				9065431F1DC7BE8E00DAE096 /* ViewController.swift */,
 				906543211DC7BE8E00DAE096 /* Main.storyboard */,
 				906543241DC7BE8E00DAE096 /* Assets.xcassets */,
 				906543261DC7BE8E00DAE096 /* LaunchScreen.storyboard */,
+				3C0B38211E4BC71900BEE1E9 /* GoogleService-Info.plist */,
 				906543291DC7BE8E00DAE096 /* Info.plist */,
 			);
 			path = MotionTracking;
@@ -262,8 +267,13 @@
 				TargetAttributes = {
 					906543191DC7BE8E00DAE096 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = CQD8Z7UVJ4;
+						DevelopmentTeam = QBURSC393N;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					9065432D1DC7BE8F00DAE096 = {
 						CreatedOnToolsVersion = 8.0;
@@ -305,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				906543281DC7BE8E00DAE096 /* LaunchScreen.storyboard in Resources */,
+				3C0B38221E4BC71900BEE1E9 /* GoogleService-Info.plist in Resources */,
 				906543251DC7BE8E00DAE096 /* Assets.xcassets in Resources */,
 				906543231DC7BE8E00DAE096 /* Main.storyboard in Resources */,
 			);
@@ -627,7 +638,8 @@
 			baseConfigurationReference = B3D260108E74C76F6C560AF3 /* Pods-MotionTracking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CQD8Z7UVJ4;
+				CODE_SIGN_ENTITLEMENTS = MotionTracking/MotionTracking.entitlements;
+				DEVELOPMENT_TEAM = QBURSC393N;
 				INFOPLIST_FILE = MotionTracking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LimitlessStudios.MotionTracking;
@@ -641,7 +653,8 @@
 			baseConfigurationReference = A30DC65283F8D3213FA11995 /* Pods-MotionTracking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CQD8Z7UVJ4;
+				CODE_SIGN_ENTITLEMENTS = MotionTracking/MotionTracking.entitlements;
+				DEVELOPMENT_TEAM = QBURSC393N;
 				INFOPLIST_FILE = MotionTracking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LimitlessStudios.MotionTracking;

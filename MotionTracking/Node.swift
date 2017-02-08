@@ -20,7 +20,9 @@ struct Node {
     func description() -> String {
         return "Top Venue: \(topVenue)\nBrightness: \(brightness)\nLocation: \(location)"
     }
-    
+    func toDictionary() -> [String:Any] {
+        return ["longitude":location?.0,"latitude":location?.1,"venue":topVenue?.name,"brightness":brightness]
+    }
 }
 
 struct Venue {

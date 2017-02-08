@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseDatabase
 
-struct FirebaseHandler{
-    func pushNode(node: Node){
-        
-    }
-    
+let ref = FIRDatabase.database().reference()
+
+func pushNode(node: Node) {
+    print("push Node")
+    print(ref.description())
+    ref.child("Nodes").childByAutoId().setValue(node.toDictionary())
 }

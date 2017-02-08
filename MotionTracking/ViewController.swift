@@ -50,9 +50,7 @@ class ViewController: UIViewController {
             
             if self.secondsUntilUpdate == 0 {
                 self.secondsUntilUpdate = self.timeTilUpdate * 60
-                self.updateData { (node) in
-                    print(node.description())
-                }
+                self.updateData()
             }
         })
         
@@ -62,9 +60,7 @@ class ViewController: UIViewController {
         self.placesClient = GMSPlacesClient.shared()
         
         setUpActivityManager()
-        updateData { (node) in
-            // print(node.description())
-        }
+        updateData()
         
         // Register to receive notification
         NotificationCenter.default.addObserver(self, selector: #selector(self.getScreenBrightness), name: .UIScreenBrightnessDidChange, object: nil)
@@ -75,32 +71,40 @@ class ViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: .UIScreenBrightnessDidChange, object: nil)
     }
     
-    func updateData(completion: ((_ n: Node) -> Void)? = nil){
+    func updateData() {
         var node: Node! = Node()
-        
-        DispatchQueue.main.async{
+        let group = DispatchGroup()
+        group.enter()
+        DispatchQueue.main.async(group: group, execute: {
             self.getCurrentLocation { (location) in
                 node.location = location
                 self.coordinateLabel.text = "\(location)"
+                group.leave()
             }
-            
+        })
+        group.enter()
+        DispatchQueue.main.async(group: group, execute: {
             self.getCurrentVenue { (venue, venues) in
                 node.topVenue = venue
                 node.possibleVenues = venues
                 self.venueLabel.text = venue.name
-                print(node.description())
-                completion!(node)
+                group.leave()
             }
-            
+        })
+        group.enter()
+        DispatchQueue.main.async(group: group, execute: {
             self.getScreenBrightness { (brightness) in
                 node.brightness = brightness
                 self.screenBrightnessLabel.text = "\(brightness)"
+                group.leave()
             }
-            
-//            self.activityManager.queryActivityStarting(from: <#T##Date#>, to: <#T##Date#>, to: <#T##OperationQueue#>, withHandler: { (<#[CMMotionActivity]?#>, <#Error?#>) in
-//                <#code#>
-//            })
-        }
+        })
+
+        group.notify(queue: DispatchQueue.main, execute: {
+            print("hello")
+            print(node.description())
+            pushNode(node: node)
+        })
     }
         
     private func setUpActivityManager(){

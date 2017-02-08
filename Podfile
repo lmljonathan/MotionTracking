@@ -9,6 +9,8 @@ target 'MotionTracking' do
   pod 'GoogleMaps'
   pod 'SwiftyTimer'
   pod 'TrueTime'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'	
 end
 
 target 'MotionTrackingTests' do
