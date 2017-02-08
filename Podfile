@@ -7,6 +7,8 @@ target 'MotionTracking' do
   pod 'Alamofire'
   pod 'GooglePlaces'
   pod 'GoogleMaps'
+  pod 'SwiftyTimer'
+  pod 'TrueTime'
 end
 
 target 'MotionTrackingTests' do
